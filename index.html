@@ -5,12 +5,14 @@
 <title>Formulář</title>
 </head>
 <body>
-<form>
+<p>POST odešle zadané hodnoty službě třetí strany httpbin.org; zadávej pouze zkušební údaje.</p>
+<form method="get" action="vysledek.html">
 <p><label>Jméno <input type="text" name="jmeno"></label></p>
 <p><label>E-mail <input type="email" name="email"></label></p>
 <p><label>Telefon <input type="tel" name="telefon"></label></p>
 <p><label>Zpráva <input type="text" name="zprava"></label></p>
-<p><button type="submit">Odeslat</button></p>
+<p><button type="submit">Odeslat přes GET</button>
+<button type="submit" formmethod="post" formaction="https://httpbin.org/post">Odeslat přes POST</button></p>
 </form>
 </body>
 </html>
